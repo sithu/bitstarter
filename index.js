@@ -4,13 +4,26 @@ var Hapi = require('hapi');
 var internals = {};
 
 
-var handler = function (request) {
+var indexHandler = function (request) {
 
     request.reply.view('index', {
         title: 'OneStop'
     });
 };
 
+var searchHandler = function (request) {
+
+    request.reply.view('search', {
+        title: 'OneStop'
+    });
+};
+
+var recipeHandler = function (request) {
+
+    request.reply.view('recipe', {
+        title: 'OneStop'
+    });
+};
 
 internals.main = function () {
 
@@ -29,10 +42,18 @@ internals.main = function () {
     		directory: { path: './static', listing: false, index: true }
     	}
 	});
-    server.route({ method: 'GET', path: '/', handler: handler });
+    // routing config here
+    server.route({ method: 'GET', path: '/', handler: indexHandler });
+	server.route({ method: 'POST', path: '/search', handler: searchHandler });
+	server.route({ method: 'GET', path: '/recipe', handler: recipeHandler });
     server.route({ method: 'GET', path: '/ping', handler: function() { this.reply('Hello'); } });
+    
     server.start();
 };
 
+var util = require('util');   
+
+/* server started */  
+util.puts('> Node.JS is running on port 8080');
 
 internals.main();
