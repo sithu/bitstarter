@@ -1,11 +1,12 @@
 var Hapi = require('hapi');
+var log = require('./logger');
 // Declare internals
 
 var internals = {};
 
 
 var indexHandler = function (request) {
-
+	log.info('::home:');
     request.reply.view('index', {
         title: 'OneStop'
     });

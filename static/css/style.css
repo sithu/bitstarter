@@ -3,6 +3,7 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  background-color: #EEE; /* Ke */
 }
 
 .footer-bar {
@@ -108,3 +109,81 @@ color: #999999;
   font-family: 'Pacifico', cursive;
   font-size: 30px;
 }
+
+/* Ke stuffs */
+.step {
+    font-size: 1.3em;
+}
+.step-number {
+    width: 1.8em;
+    height: 1.8em;
+    font-size: 2.5em;
+    border: .2em solid #999;
+
+    font-weight: bold;
+    border-radius: 50%;
+    float: left;
+    color: #999;
+    text-align: center;
+    margin-right: .5em;
+}
+
+.step .directions {
+    font-size: 1em;
+}
+
+.step {
+    margin: 2em 0;
+}
+
+.recipe-steps {
+    border-top: .1em solid #DDD;
+    border-bottom: .1em solid #DDD;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.recipies {
+    margin-top: 2em;
+}
+
+.recipies .btn {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.total-box {
+    width: 5em;
+    height: 5em;
+    font-size: 1.2em;
+    display: inline-block;
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #F6F6F6;
+}
+
+.total-box i {
+    display: block;
+    margin-top: .3em;
+}
+
+.cost-time {
+    color: #F33;
+    border-color: #A00;
+}
+.cost-money {
+    color: #363;
+    border-color: #363;
+}
+
+.profile-heading {
+    font-size: 1em;
+}
+
+.profile-heading h1 {
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: .5em;
+}
+/* Ke stuffs END here */

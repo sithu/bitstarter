@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OneStop</title>
+    <title>Biz Recipes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    
+
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/bootstrap-glyphicons.css" rel="stylesheet">
 	<link href="../static/css/carousel.css" rel="stylesheet">
@@ -37,14 +37,19 @@
     	      <span class="icon-bar"></span>
     	    </button>
             <a class="navbar-brand" href="#">OneStop</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav pull-right navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-		  </div><!-- container -->
+		        <form class="navbar-form pull-right">
+		            <input type="text" class="form-control" placeholder="Search Recipes" autofocus="autofocus">
+		            <button class="btn btn-primary glyphicon glyphicon-search" type="button"></button>
+		        </form>
+		        <div class="nav-collapse collapse">
+
+		            <ul class="nav pull-right navbar-nav">
+		                <li class="active"><a href="#">Home</a></li>
+		                <li><a href="#about">About</a></li>
+		                <li><a href="#contact">Contact</a></li>
+		            </ul>
+		        </div>
+		    </div><!-- container -->
         </div>
 
     
@@ -55,58 +60,72 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container">
-	    <div class="jumbotron">
-	    	<div class="list-group">
-  				<span href="#" class="list-group-item active">
-    			Trademark Recipe
-  				</span>
-  				<span class="rating">
-          			<span class="star"></span>
-          			<span class="star"></span>
-          			<span class="star"></span>
-          			<span class="star"></span>
-          			<span class="star"></span>
-        		</span>
-  			</div>
+    <div class="container recipies">
+    <div class="panel">
+        <div class="container profile-heading">
+            <div class="pull-left">
+                <h1 href="#" class="active">Trademark Recipe</h1>
+                <div>by <a href="#">Submitty McLawyerton</a>, 0 views</div>
+            </div>
+            <div class="pull-right">
+                <div class="total-box total-time cost-time">
+                    <i class="icon-time icon-2x"></i>
+                    <label>45 min</label>
+                </div>
+                <div class="total-box total-money cost-money">
+                    <i class="icon-money icon-2x"></i>
+                    <label>$375.00</label>
+                </div>
+                <!--div class="rating">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                </div-->
+            </div>
+        </div>
 
-  			<div class="list-group">
-  				<li class="list-group-item">
-	    			<span class="icon-stack"><i class="icon-circle icon-stack-base"></i><i class="icon-light">1</i></span>
-					asdfasdf
-					<span
-						<i class="icon-time icon-large">20 min</i><i class="icon-dollar">99.99</i>
-					</span>
-				</li>
-				<li class="list-group-item">
-	    			<span class="icon-stack"><i class="icon-circle icon-stack-base"></i><i class="icon-light">2</i></span>
-					asdfasdf
-				</li>
-				<li class="list-group-item">
-	    			<span class="icon-stack"><i class="icon-circle icon-stack-base"></i><i class="icon-light">3</i></span>
-					asdfasdf
-				</li>
-				<li class="list-group-item">
-	    			<span class="icon-stack"><i class="icon-circle icon-stack-base"></i><i class="icon-light">4</i></span>
-					asdfasdf
-				</li>
-			</div>
-	  		
-	  		<p>
-	  			<a class="btn btn-primary">Add to Favorites</a>
-	  			<span class="pull-right">
-					Share
-					<span class="btn-group pull">
-						<a class="btn" href="#"><i class="icon-envelope icon-2x"></i></a>
-					  	<a class="btn" href="#"><i class="icon-facebook icon-2x"></i></a>
-					  	<a class="btn" href="#"><i class="icon-twitter icon-2x"></i></a>
-					  	<a class="btn" href="#"><i class="icon-google-plus icon-2x"></i></a>
-					</span>
-			</span>
-	  		</p>
-		</div>    
-    </div><!-- /.row -->
+        <div class="recipe-steps container">
+            <div class="step clearfix">
+                <div class="col-1"><div class="step-number">1</div></div>
 
+                <div class="col-2 pull-right">
+                    <span class="icon-time icon-large cost-time">20 min</span> <span class="icon-dollar cost-money">99.99</span>
+                </div>
+
+                <div class="col-9 directions">
+                    I am the very model of a modern major general -- I've information vegetable, animal, and mineral.
+                    I know the kings of England and I quote the fights historical, from Marathon to Waterloo in order categorical.<br />
+                    <br />
+                    I'm very well acquainted, too, with matters mathematical.<br />
+                    I understand equations, both the simple and quadratical.
+                </div>
+            </div>
+            <div class="step clearfix">
+                <div class="col-1"><div class="step-number">2</div></div>
+
+                <div class="col-2 pull-right">
+                    <span class="icon-time icon-large cost-time">20 min</span> <span class="icon-dollar cost-money">99.99</span>
+                </div>
+
+                <div class="col-9 directions">
+                    I am the very model of a modern major general -- I've information vegetable, animal, and mineral.
+                    I know the kings of England and I quote the fights historical, from Marathon to Waterloo in order categorical.<br />
+                    <br />
+                    I'm very well acquainted, too, with matters mathematical.<br />
+                    I understand equations, both the simple and quadratical.
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <a class="btn btn-danger"><i class="icon-heart"></i> Add to Favorites</a>
+            <a class="btn btn-primary"><i class="icon-share"></i> Share with others</a>
+        </div>
+
+    </div>
+</div><!-- /.row -->
 
 
 
