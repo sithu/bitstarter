@@ -5,6 +5,12 @@ body {
   padding-bottom: 20px;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 /* Set widths on the navbar form inputs since otherwise they're 100% wide */
 .navbar-form input[type="text"],
 .navbar-form input[type="password"] {
@@ -46,4 +52,30 @@ body {
   margin-left: -60px;
   text-align: center;
   list-style: none;
+}
+
+.search-box-with-result {
+  position: absolute;
+  top: 85px;
+  left: 37%;
+  z-index: 15;
+  width: 560px;
+  padding-left: 0;
+  margin-left: -60px;
+  text-align: center;
+  list-style: none;
+}
+
+/* Carousel override */
+.search-box {
+  height: 150px;
+}
+
+/* .item > img is still needed? */
+.search-box-block > .item > img {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  min-width: 100%;
+  height: 150px;
 }
