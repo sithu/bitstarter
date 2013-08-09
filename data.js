@@ -41,7 +41,7 @@ var recipes = [
 	id: 3,
 	steps: [
 		{ step: 1, desc: "Run preliminary check to see if the name you want is taken.", time: "5 min" },
-		{ step: 2, desc: "Choose a name for your new business.", time: "?" },
+		{ step: 2, desc: "Choose a name for your new business.", time: "30 min" },
 		{ step: 3, desc: "Download LLC registration form and file the articles of organization with state form.", time: "30 min" },
 		{ step: 4, desc: "Prepare an Operating Agreement form", time: "40 min", divider: true }
 	],
