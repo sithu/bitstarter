@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OneStop</title>
+    <title>Biz Recipes</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
-    
+
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/bootstrap-glyphicons.css" rel="stylesheet">
 	<link href="../static/css/carousel.css" rel="stylesheet">
@@ -30,101 +30,102 @@
   <body>
     
         <div class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-    	    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-    	      <span class="icon-bar"></span>
-    	      <span class="icon-bar"></span>
-    	      <span class="icon-bar"></span>
-    	    </button>
-            <a class="navbar-brand" href="#">OneStop</a>
-            <div class="nav-collapse collapse">
-              <ul class="nav pull-right navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-		  </div><!-- container -->
-        </div>
+	      <div class="container">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="/">Biz Recipes</a>
+	          <form class="navbar-form pull-right">
+	              <input type="text" class="form-control" placeholder="Search Recipes" autofocus="autofocus">
+	              <button class="btn btn-primary glyphicon glyphicon-search" type="button"></button>
+	          </form>
+	          <div class="nav-collapse collapse">
+
+	              <ul class="nav pull-right navbar-nav">
+	                  <li><a href="#">Home</a></li>
+	                  <li><a href="#about">About</a></li>
+	                  <li><a href="#contact">Contact</a></li>
+	              </ul>
+	          </div>
+	      </div><!-- container -->
+	  </div>
 
     
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="search-box">
-    	<!-- search input -->
-		<div id="search" class="search-box-with-result">
-			<div class="input-group">
-		      <input type="text" class="form-control" placeholder="Search Recipes" autofocus="autofocus">
-		      <span class="input-group-btn">
-		        <button class="btn btn-primary glyphicon glyphicon-search" type="button"></button>
-		      </span>
-		    </div><!-- /input-group -->
-      	</div>
-
-     
-      
-      <div class="search-box-block">
-      	<div class="item active">
-          <img data-src="holder.js/1500x500/auto/#777:#7a7a7a/text:recipes" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-            	
-            </div>
-          </div>
-        </div>
-        
-        
-      </div>
-    
-    </div><!-- /.carousel -->
-
-
-
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <div class="container search-results">
+        <h3>Match Recipes <span class="badge">3</span></h3>
     <div class="list-group">
 		<!--div class="panel-primary "><span class="label label-info">3</span> Recipes Found</div -->
-		<a href="#" class="list-group-item active"><span class="label label-default">3</span> Recipes Found</a>
+
     	<ul class="list-group">
 		  <li class="list-group-item">
-			<a>Trademark Recipe</a>
-			<div class="pull-right">
-		  		<span class="badge">2034</span> Views
-		  		<span></span>
-		  		<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-		    </div>
+
+              <div class="container profile-heading">
+                  <div class="pull-left">
+                      <a href=""><h1 class="active">LLC Recipe</h1></a>
+                      <div class="by-line">by <a href="#">Submitty McLawyerton</a>, 0 views</div>
+                  </div>
+                  <div class="pull-right">
+                      <div class="total-box total-time cost-time platinum-grad">
+                          <i class="icon-time icon-2x"></i>
+                          <label>45 min</label>
+                      </div>
+                      <div class="total-box total-money cost-money platinum-grad">
+                          <i class="icon-dollar icon-2x"></i>
+                          <label>Low</label>
+                      </div>
+                  </div>
+              </div>
+
 		  </li>
 
 		  <li class="list-group-item">
-			<a>Forming LLC Recipe</a>
-			<div class="pull-right">
-		  		<span class="badge">1124</span> Views
-		  		<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-		    	
-			</div>
+
+              <div class="container profile-heading">
+                  <div class="pull-left">
+                      <a href=""><h1 href="#" class="active">Get Out of Jail Free Recipe</h1></a>
+                      <div class="by-line">by <a href="#">The Monopoly Guy</a>, 0 views</div>
+
+                  </div>
+                  <div class="pull-right">
+                      <div class="total-box total-time cost-time platinum-grad">
+                          <i class="icon-time icon-2x"></i>
+                          <label>20 yrs</label>
+                      </div>
+                      <div class="total-box total-money cost-money platinum-grad">
+                          <i class="icon-dollar icon-2x"></i>
+                          <label>FREE</label>
+                      </div>
+                  </div>
+              </div>
+
 		  </li>
 
 		  <li class="list-group-item">
-			<a>Business Plan Recipe</a>
-			<div class="pull-right">
-		  		<span class="badge">1745</span> Views
-		  		<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star"></span>
-              	<span class="glyphicon glyphicon-star-empty"></span>
-		    </div>
+
+              <div class="container profile-heading">
+                  <div class="pull-left">
+                      <a href=""><h1 href="#" class="active">Trademark Recipe</h1></a>
+                      <div class="by-line">by <a href="#">Submitty McLawyerton</a>, 0 views</div>
+
+                  </div>
+                  <div class="pull-right">
+                      <div class="total-box total-time cost-time platinum-grad">
+                          <i class="icon-time icon-2x"></i>
+                          <label>45 min</label>
+                      </div>
+                      <div class="total-box total-money cost-money platinum-grad">
+                          <i class="icon-dollar icon-2x"></i>
+                          <label>High</label>
+                      </div>
+                  </div>
+              </div>
+
 		  </li>
 		</ul>
 	</div><!-- search panel div -->     
@@ -140,7 +141,9 @@
       <footer class="footer-bar panel-footer">
       	<div class="footer-text">
         	<p class="pull-right"><a href="#">Back to top</a></p>
-        	<p>&copy; 2013 Intuit Lab, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        	<p>&copy; 2013 <a href="https://intuitlabs.com/">Intuit Labs</a> &middot; 
+        		<a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        	</p>
     	</div>
       </footer>
 

@@ -13,7 +13,7 @@ var indexHandler = function (request) {
 };
 
 var searchHandler = function (request) {
-
+    log.info('::search:keyword:' + request.payload.search);
     request.reply.view('search', {
         title: 'OneStop'
     });
@@ -24,6 +24,15 @@ var recipeHandler = function (request) {
     request.reply.view('recipe', {
         title: 'OneStop'
     });
+};
+// config
+var searchConfig = {
+    handler: searchHandler, 
+    payload: 'parse',
+    validate: { 
+        payload: { 
+            name: Hapi.types.String().optional()
+    } }
 };
 
 internals.main = function () {
@@ -45,7 +54,7 @@ internals.main = function () {
 	});
     // routing config here
     server.route({ method: 'GET', path: '/', handler: indexHandler });
-	server.route({ method: 'POST', path: '/search', handler: searchHandler });
+	server.route({ method: 'POST', path: '/search', config: searchConfig });
 	server.route({ method: 'GET', path: '/recipe', handler: recipeHandler });
     server.route({ method: 'GET', path: '/ping', handler: function() { this.reply('Hello'); } });
     
