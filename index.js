@@ -44,6 +44,16 @@ var likedHandler = function (request) {
     request.reply().code(200);
 };
 
+var newRecipeHandler = function (request) {
+    log.info('::create-new-recipe:');
+    request.reply().code(200);
+};
+
+var addToRecipeBoxHandler = function (request) {
+    log.info('::add-to-my-recipe-box:');
+    request.reply().code(200);
+};
+
 // config
 var searchConfig = {
     handler: searchHandler, 
@@ -76,6 +86,8 @@ internals.main = function () {
 	server.route({ method: 'POST', path: '/search', config: searchConfig });
 	server.route({ method: 'GET', path: '/recipe/{id}', handler: recipeHandler });
     // API Handlers
+    server.route({ method: 'GET', path: '/new-recipe', handler: newRecipeHandler });
+    server.route({ method: 'GET', path: '/add-to-my-recipe-box', handler: addToRecipeBoxHandler });
     server.route({ method: 'GET', path: '/recipe/{id}/liked', handler: likedHandler });
 
     server.route({ method: 'GET', path: '/ping', handler: function() { this.reply('Hello'); } });

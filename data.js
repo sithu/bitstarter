@@ -35,16 +35,17 @@ var recipes = [
 	total_cost: "Free"
 },
 {
-	name: "Business Plan Recipe",
+	name: "How to Become a LLC Recipe",
 	author: "Bar Foo",
 	views: 0,
 	id: 3,
 	steps: [
-		{ step: 1, desc: "aaaaaa", time: "20 min", cost: "10" },
-		{ step: 2, desc: "bbbbbb", time: "30 min" },
-		{ step: 3, desc: "cccccc", time: "40 min", cost: "25" , divider: true }
+		{ step: 1, desc: "Run preliminary check to see if the name you want is taken.", time: "5 min" },
+		{ step: 2, desc: "Choose a name for your new business.", time: "?" },
+		{ step: 3, desc: "Download LLC registration form and file the articles of organization with state form.", time: "30 min" },
+		{ step: 4, desc: "Prepare an Operating Agreement form", time: "40 min", divider: true }
 	],
-	total_time: "45 min",
+	total_time: "1.5 hrs",
 	total_cost: "Low"
 }
 ];
