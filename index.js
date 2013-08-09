@@ -1,6 +1,8 @@
 var Hapi = require('hapi');
 var log = require('./logger');
 var recipes = require('./data');
+var Datastore = require('./datastore');
+var ds = new Datastore();
 
 // Declare internals
 
@@ -23,15 +25,23 @@ var indexHandler = function (request) {
 
 var searchHandler = function (request) {
     log.info('::search:keyword:' + request.payload.search);
-    request.reply.view('search', {
-        title: 'OneStop'
-    });
+    request.reply.view('search', ds.content);
 };
 
 var recipeHandler = function (request) {
-    log.info('::recipe:id:' + request.params.id);
-    var recipe = getRecipe(parseInt(request.params.id));
+    log.info('::recipe:' + request.params.id);
+    var id = parseInt(request.params.id);
+    var recipe = getRecipe(id);
+    ds.viewed(id);
+    recipe['liked_url'] = "/recipe/" + id + "/liked";
+    recipe.views = ds.content.recipes[id - 1].views;
     request.reply.view('recipe', recipe);
+};
+
+var likedHandler = function (request) {
+    log.info('::liked:' + request.params.id);
+    ds.liked(parseInt(request.params.id));
+    request.reply().code(200);
 };
 
 // config
@@ -61,10 +71,13 @@ internals.main = function () {
     		directory: { path: './static', listing: false, index: true }
     	}
 	});
-    // routing config here
+    // routing config - View Handlers
     server.route({ method: 'GET', path: '/', handler: indexHandler });
 	server.route({ method: 'POST', path: '/search', config: searchConfig });
 	server.route({ method: 'GET', path: '/recipe/{id}', handler: recipeHandler });
+    // API Handlers
+    server.route({ method: 'GET', path: '/recipe/{id}/liked', handler: likedHandler });
+
     server.route({ method: 'GET', path: '/ping', handler: function() { this.reply('Hello'); } });
     
     server.start();

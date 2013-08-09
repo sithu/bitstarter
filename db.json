@@ -1,0 +1,22 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "views": 23,
+            "liked": 16,
+            "disliked": 0
+        },
+        {
+            "id": 2,
+            "views": 5,
+            "liked": 1,
+            "disliked": 0
+        },
+        {
+            "id": 3,
+            "views": 1,
+            "liked": 1,
+            "disliked": 0
+        }
+    ]
+}

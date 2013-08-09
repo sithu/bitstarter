@@ -30,27 +30,24 @@
   <body>
     
         <div class="navbar navbar-inverse navbar-fixed-top">
-	      <div class="container">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-	              <span class="icon-bar"></span>
-	              <span class="icon-bar"></span>
-	              <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="/">Biz Recipes</a>
-	          <form class="navbar-form pull-right">
-	              <input type="text" class="form-control" placeholder="Search Recipes" autofocus="autofocus">
-	              <button class="btn btn-primary glyphicon glyphicon-search" type="button"></button>
-	          </form>
-	          <div class="nav-collapse collapse">
-
-	              <ul class="nav pull-right navbar-nav">
-	                  <li><a href="#">Home</a></li>
-	                  <li><a href="#about">About</a></li>
-	                  <li><a href="#contact">Contact</a></li>
-	              </ul>
-	          </div>
-	      </div><!-- container -->
-	  </div>
+		   <div class="container">
+		       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+		           <span class="icon-bar"></span>
+		           <span class="icon-bar"></span>
+		           <span class="icon-bar"></span>
+		       </button>
+		       <a class="navbar-brand" href="/">Biz Recipes</a>
+		                <ul class="nav pull-right navbar-nav">
+		                    <li class="active"><a href="/">Home</a></li>
+		                    <li><a href="#about">About</a></li>
+		                    <li><a href="#contact">Contact</a></li>
+		                </ul>
+		                <form class="navbar-form" style="width: 100%; text-align: center">
+		                    <input type="text" class="form-control" style="width: 400px" placeholder="Search Recipes" autofocus="autofocus">
+		                    <button class="btn btn-primary glyphicon glyphicon-search" type="button"></button>
+		                </form>
+		   </div><!-- container -->
+		</div>
 
     
     <!-- Marketing messaging and featurettes
@@ -63,12 +60,12 @@
 		<!--div class="panel-primary "><span class="label label-info">3</span> Recipes Found</div -->
 
     	<ul class="list-group">
-		  <li class="list-group-item">
+    	  <li class="list-group-item">
 
               <div class="container profile-heading">
                   <div class="pull-left">
                       <a href="/recipe/1"><h1 class="active">Trademark Recipe</h1></a>
-                      <div class="by-line">by <a href="#">Submitty McLawyerton</a>, 0 views</div>
+                      <div class="by-line">by <a href="#">Submitty McLawyerton</a>, {{recipes.0.views}} views</div>
                   </div>
                   <div class="pull-right">
                       <div class="total-box total-time cost-time platinum-grad">
@@ -83,23 +80,22 @@
               </div>
 
 		  </li>
-
 		  <li class="list-group-item">
 
               <div class="container profile-heading">
                   <div class="pull-left">
-                      <a href="/recipe/2"><h1 class="active">Forming LLC Recipe</h1></a>
-                      <div class="by-line">by <a href="#">The Monopoly Guy</a>, 0 views</div>
+                      <a href="/recipe/2"><h1 class="active">How to Become a S-Corporation Recipe</h1></a>
+                      <div class="by-line">by <a href="#">Jivan, Malathi</a>, {{recipes.1.views}} views</div>
 
                   </div>
                   <div class="pull-right">
                       <div class="total-box total-time cost-time platinum-grad">
                           <i class="icon-time icon-2x"></i>
-                          <label>20 yrs</label>
+                          <label>25 min</label>
                       </div>
                       <div class="total-box total-money cost-money platinum-grad">
                           <i class="icon-dollar icon-2x"></i>
-                          <label>FREE</label>
+                          <label>Free</label>
                       </div>
                   </div>
               </div>
@@ -111,7 +107,7 @@
               <div class="container profile-heading">
                   <div class="pull-left">
                       <a href=""><h1 href="#" class="active">XXX Recipe</h1></a>
-                      <div class="by-line">by <a href="#">Submitty McLawyerton</a>, 0 views</div>
+                      <div class="by-line">by <a href="#">Submitty McLawyerton</a>, {{recipes.2.views}} views</div>
 
                   </div>
                   <div class="pull-right">
