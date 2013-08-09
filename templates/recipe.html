@@ -9,13 +9,13 @@
     <title>Biz Recipes</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-glyphicons.css" rel="stylesheet">
-	<link href="css/carousel.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-glyphicons.css" rel="stylesheet">
+	<link href="../css/carousel.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
 
     <link href="../static/css/bootstrap.css" rel="stylesheet">
     <link href="../static/css/bootstrap-glyphicons.css" rel="stylesheet">
@@ -61,8 +61,8 @@
 	    <div class="panel clearfix">
 	        <div class="container profile-heading">
 	            <div class="pull-left">
-	                <h1 href="#" class="active">Trademark Recipe</h1>
-	                <div class="by-line">by <a href="#">Submitty McLawyerton</a>, 0 views</div>
+	                <h1 href="#" class="active">{{name}}</h1>
+	                <div class="by-line">by <a href="#">Submitty McLawyerton</a>, {{views}} views</div>
 
 	                <!-- div class="rating pull-left">
 	                    <span class="star"></span>
@@ -79,49 +79,37 @@
 	            <div class="pull-right">
 	                <div class="total-box total-time cost-time platinum-grad">
 	                    <i class="icon-time icon-2x"></i>
-	                    <label>45 min</label>
+	                    <label>{{total_time}}</label>
 	                </div>
 	                <div class="total-box total-money cost-money platinum-grad">
 	                    <i class="icon-dollar icon-2x"></i>
-	                    <label>Low</label>
+	                    <label>{{total_cost}}</label>
 	                </div>
 	            </div>
 	        </div>
 
 	        <div class="recipe-steps container">
+	        	
+	        	{{#each steps}}
 	            <div class="step clearfix">
-	                <div class=""><div class="step-number">1</div></div>
+	                <div class=""><div class="step-number">{{step}}</div></div>
 
 	                <div class="col-2 pull-right">
-	                    <span class="icon-time icon-large cost-time">20 min</span> <span class="icon-dollar cost-money">99.99</span>
+	                    <span class="icon-time icon-large cost-time">{{time}}</span>
+	                    <span class="icon-dollar cost-money">{{cost}}</span>
 	                </div>
 
 	                <div class="col-8 directions">
-	                    I am the very model of a modern major general -- I've information vegetable, animal, and mineral.
-	                    I know the kings of England and I quote the fights historical, from Marathon to Waterloo in order categorical.<br />
+	                    {{desc}}
 	                    <br />
-	                    I'm very well acquainted, too, with matters mathematical.<br />
-	                    I understand equations, both the simple and quadratical.
 	                </div>
 	            </div>
-
+	            {{#unless divider}}
+	            <!-- divider -->
 	            <div class="recipe-steps"></div>
-
-	            <div class="step clearfix">
-	                <div><div class="step-number">2</div></div>
-
-	                <div class="col-2 pull-right">
-	                    <span class="icon-time icon-large cost-time">25 min</span> <span class="icon-dollar cost-money">275.01</span>
-	                </div>
-
-	                <div class="col-9 directions">
-	                    I am the very model of a modern major general -- I've information vegetable, animal, and mineral.
-	                    I know the kings of England and I quote the fights historical, from Marathon to Waterloo in order categorical.<br />
-	                    <br />
-	                    I'm very well acquainted, too, with matters mathematical.<br />
-	                    I understand equations, both the simple and quadratical.
-	                </div>
-	            </div>
+	            {{/unless}}
+	            {{/each}}
+	            
 	        </div>
 
 	        <div class="container text-center recipe-actions pull-left">
@@ -129,7 +117,15 @@
 	        </div>
 	        <div class="btn-group pull-right">
 	            <a class="btn btn-basic" href="#"><i class="icon-envelope icon-2x"></i></a>
-	            <a class="btn btn-basic" href="#"><i class="icon-facebook icon-2x"></i></a>
+	            <a class="btn btn-basic" href="#" 
+				  onclick="
+				    window.open(
+				      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
+				      'facebook-share-dialog', 
+				      'width=626,height=436'); 
+				    return false;">
+					<i class="icon-facebook icon-2x"></i>
+	            </a>
 	            <a class="btn btn-basic" href="#"><i class="icon-twitter icon-2x"></i></a>
 	            <a class="btn btn-basic" href="#"><i class="icon-google-plus icon-2x"></i></a>
 	        </div>
@@ -157,9 +153,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/holder.js"></script>
-
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/holder.js"></script>
+    
     <!-- TODO: remove these -->
     <script src="../static/js/bootstrap.min.js"></script>
     <script src="../static/js/holder.js"></script>

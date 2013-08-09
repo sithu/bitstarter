@@ -1,12 +1,21 @@
 var Hapi = require('hapi');
 var log = require('./logger');
+var recipes = require('./data');
+
 // Declare internals
 
 var internals = {};
 
+// Business Logic Functions
+function getRecipe(id) {
+    return recipes.filter(function(recipe) {
+        return recipe.id === id;
+    }).pop();
+}
 
+// Handlers
 var indexHandler = function (request) {
-	log.info('::home:');
+	log.info('::home:' + request.query.name);
     request.reply.view('index', {
         title: 'OneStop'
     });
@@ -20,18 +29,18 @@ var searchHandler = function (request) {
 };
 
 var recipeHandler = function (request) {
-
-    request.reply.view('recipe', {
-        title: 'OneStop'
-    });
+    log.info('::recipe:id:' + request.params.id);
+    var recipe = getRecipe(parseInt(request.params.id));
+    request.reply.view('recipe', recipe);
 };
+
 // config
 var searchConfig = {
     handler: searchHandler, 
     payload: 'parse',
     validate: { 
         payload: { 
-            name: Hapi.types.String().optional()
+            search: Hapi.types.String().optional()
     } }
 };
 
@@ -55,7 +64,7 @@ internals.main = function () {
     // routing config here
     server.route({ method: 'GET', path: '/', handler: indexHandler });
 	server.route({ method: 'POST', path: '/search', config: searchConfig });
-	server.route({ method: 'GET', path: '/recipe', handler: recipeHandler });
+	server.route({ method: 'GET', path: '/recipe/{id}', handler: recipeHandler });
     server.route({ method: 'GET', path: '/ping', handler: function() { this.reply('Hello'); } });
     
     server.start();
