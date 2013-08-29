@@ -23,6 +23,12 @@ git push heroku master
 heroku open
 ```
 
+## Port Redirection
+
+```
+sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 8080
+```
+
 ## Documentation
 
 For more information about using Node.js on Heroku, see these Dev Center articles:
