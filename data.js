@@ -1,7 +1,7 @@
 var recipes = [
 {
 	name: "Trademark Recipe",
-	author: "Submitty, McLawyerton",
+	author: "Todd Santos",
 	views: 10,
 	id: 1,
 	steps: [
