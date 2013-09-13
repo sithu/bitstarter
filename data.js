@@ -1,7 +1,8 @@
 var recipes = [
 {
 	name: "Trademark Recipe",
-	author: "Todd Santos",
+	author: "Biz Recipes Team",
+	author_link: "#",
 	views: 10,
 	id: 1,
 	steps: [
@@ -32,7 +33,8 @@ var recipes = [
 },
 {
 	name: "How to Become a S-Corporation Recipe",
-	author: "Jivan, Malathi",
+	author: "Malathi Jivan",
+	author_link: "#",
 	views: 1,
 	id: 2,
 	steps: [
@@ -48,7 +50,8 @@ var recipes = [
 },
 {
 	name: "How to Become a LLC Recipe",
-	author: "Bar Foo",
+	author: "Malathi Jivan",
+	author_link: "#",
 	views: 0,
 	id: 3,
 	steps: [
