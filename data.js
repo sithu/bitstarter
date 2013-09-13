@@ -13,16 +13,16 @@ var recipes = [
 			time: "15 min" },
 		{ step: 3, 
 			desc: "Explore your state’s LLC or other corporate name registry – Most states have an easily searchable database of corporate/LLC names.  This can give you a sense for whether there are other companies in your state or region who may already have adopted a similar name.", 
-			time: "20 min", divider: true },
+			time: "20 min",
 		{
 			step: 4,
 			desc: "Initially explore the U.S. Trademark Registry – While the U.S. Trademark Registry search process can be extremely complex and often requires deep legal expertise to produce and analyze meaningful results, you can do some initial searching – for example to uncover exact matches for identical marks that may already exist in the same marketplace in which you plan to do business.  At minimum, this can help you determine if the mark you want to use is already a registered trademark of another business that provides products or services that are competitive or somehow related to your own – or already established as a famous mark of a large company.",
-			time: "it depends"
+			time: "It depends"
 		},
 		{
 			step: 5,
 			desc: "Obtain the right legal advice - If the name will be an important/critical element of your business strategy, you may owe it to yourself to identify and invest in a trusted legal advisor who specializes in trademark clearance.  An experienced trademark lawyer can ensure that you obtain a meaningful and extensive trademark search report, and then help you interpret that report and decide if the name you want to adopt is legally available and defensible.  Finding the right lawyer often involves referrals from trusted friends or colleagues, or a referral from a reputable lawyer referral service or local bar association.",
-			time: "it depends", 
+			time: "It depends", 
 			divider: true
 		}
 	],
